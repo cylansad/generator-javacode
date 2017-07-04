@@ -11,6 +11,9 @@ module.exports = yeoman.extend({
     },
     prompting: function() {
         var done = this.async();
+
+        this.log(yosay('Create yjs java code generator with superpowers!'));
+
         var prompts = [{
             type: 'input',
             name: 'com_name',
@@ -33,7 +36,7 @@ module.exports = yeoman.extend({
     },
 
     selfFunction: function() {
-        this.log("执行了自定义方法");
+        //this.log("执行了自定义方法");
     },
 
     writing: function() {

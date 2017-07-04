@@ -41,13 +41,13 @@ public class <%=fileTitle%>ServiceImpl implements <%=fileTitle%>Service {
 	private DaoService daoService;
 
 	/**
-	 * 排课批次查询
+	 * <%=beanTitle%>查询
 	 */
 	public <%=fileTitle%>Result <%=beanTitle%>Query(<%=fileTitle%> param, QueryConfig config, String setting, String logKey, UserInfo userInfo) {
 		<%=fileTitle%>Result result = new <%=fileTitle%>Result();
 
 		if (StringUtils.equals(config.getOrder(), GglglConstants.QUERY_CONFIG_DEFAULT_ORDER)) {
-			//config.setOrder("-XNXQDM,-WHJSRQ");
+			//config.setOrder("-XNXQDM,-WHJSRQ");	// 默认排序
 		}
 
 		try {
