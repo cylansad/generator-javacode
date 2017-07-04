@@ -21,7 +21,7 @@ import com.wisedu.emap.<%=com%>.service.<%=fileTitle%>Service;
 import com.wisedu.emap.ws.Documentation;
 
 /**
- * 查询服务类
+ * <%=beanTitle%>查询服务类
  * 
  * @author 
  * 

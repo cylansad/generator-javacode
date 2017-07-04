@@ -10,9 +10,9 @@ import com.wisedu.business.ws.BaseBean;
 import com.wisedu.emap.ws.Documentation;
 
 /**
- * <%=fileTitle%>
+ * <%=fileTitle%>实体
  * 
- * @author generator-javacode
+ * @author
  * 
  */
 public class <%=fileTitle%> extends BaseBean {

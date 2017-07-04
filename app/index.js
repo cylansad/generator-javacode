@@ -21,7 +21,7 @@ module.exports = yeoman.extend({
             type: 'input',
             name: 'model_name',
             message: 'Please input model name:',
-            default: 'Pkpc'
+            default: 'pkpc,xnxq'
         }];
         return this.prompt(prompts).then(function(answers) {
             this.answers = answers;
@@ -38,82 +38,85 @@ module.exports = yeoman.extend({
     },
 
     writing: function() {
-        var fileTitle = this.answers.model_name.toLowerCase().replace(/(\w)/, function(v) {
-            return v.toUpperCase()
-        });
-        var beanTitle = this.answers.model_name.toLowerCase();
+        var modelNameArrs = this.answers.model_name.split(',');
 
-        /**
-         * 创建po实体和result
-         */
-        this.fs.copyTpl(
-            this.templatePath('po.java'),
-            this.destinationPath('public/po/' + fileTitle + '.java'), {
-                fileTitle: fileTitle,
-                beanTitle: beanTitle,
-                com: this.answers.com_name
-            }
-        );
-        this.fs.copyTpl(
-            this.templatePath('poResult.java'),
-            this.destinationPath('public/po/' + fileTitle + 'Result.java'), {
-                fileTitle: fileTitle,
-                beanTitle: beanTitle,
-                com: this.answers.com_name
-            }
-        );
+        for (var i = 0; i < modelNameArrs.length; i++) {
+            var fileTitle = modelNameArrs[i].toLowerCase().replace(/(\w)/, function(v) {
+                return v.toUpperCase()
+            });
+            var beanTitle = modelNameArrs[i].toLowerCase();
 
-        /**
-         * 创建dao及实现类
-         */
-        this.fs.copyTpl(
-            this.templatePath('daoImpl.java'),
-            this.destinationPath('public/dao/impl/' + fileTitle + 'DaoImpl.java'), {
-                fileTitle: fileTitle,
-                beanTitle: beanTitle,
-                com: this.answers.com_name
-            }
-        );
-        this.fs.copyTpl(
-            this.templatePath('dao.java'),
-            this.destinationPath('public/dao/' + fileTitle + 'Dao.java'), {
-                fileTitle: fileTitle,
-                beanTitle: beanTitle,
-                com: this.answers.com_name
-            }
-        );
+            /**
+             * 创建po实体和result
+             */
+            this.fs.copyTpl(
+                this.templatePath('po.java'),
+                this.destinationPath('public/po/' + fileTitle + '.java'), {
+                    fileTitle: fileTitle,
+                    beanTitle: beanTitle,
+                    com: this.answers.com_name
+                }
+            );
+            this.fs.copyTpl(
+                this.templatePath('poResult.java'),
+                this.destinationPath('public/po/' + fileTitle + 'Result.java'), {
+                    fileTitle: fileTitle,
+                    beanTitle: beanTitle,
+                    com: this.answers.com_name
+                }
+            );
 
-        /**
-         * 创建service及实现类
-         */
-        this.fs.copyTpl(
-            this.templatePath('service.java'),
-            this.destinationPath('public/service/' + fileTitle + 'Service.java'), {
-                fileTitle: fileTitle,
-                beanTitle: beanTitle,
-                com: this.answers.com_name
-            }
-        );
-        this.fs.copyTpl(
-            this.templatePath('serviceImpl.java'),
-            this.destinationPath('public/service/impl/' + fileTitle + 'ServiceImpl.java'), {
-                fileTitle: fileTitle,
-                beanTitle: beanTitle,
-                com: this.answers.com_name
-            }
-        );
+            /**
+             * 创建dao及实现类
+             */
+            this.fs.copyTpl(
+                this.templatePath('daoImpl.java'),
+                this.destinationPath('public/dao/impl/' + fileTitle + 'DaoImpl.java'), {
+                    fileTitle: fileTitle,
+                    beanTitle: beanTitle,
+                    com: this.answers.com_name
+                }
+            );
+            this.fs.copyTpl(
+                this.templatePath('dao.java'),
+                this.destinationPath('public/dao/' + fileTitle + 'Dao.java'), {
+                    fileTitle: fileTitle,
+                    beanTitle: beanTitle,
+                    com: this.answers.com_name
+                }
+            );
 
-        /**
-         * 创建ws服务类
-         */
-        this.fs.copyTpl(
-            this.templatePath('queryWS.java'),
-            this.destinationPath('public/ws/' + fileTitle + 'QueryWebService.java'), {
-                fileTitle: fileTitle,
-                beanTitle: beanTitle,
-                com: this.answers.com_name
-            }
-        );
+            /**
+             * 创建service及实现类
+             */
+            this.fs.copyTpl(
+                this.templatePath('service.java'),
+                this.destinationPath('public/service/' + fileTitle + 'Service.java'), {
+                    fileTitle: fileTitle,
+                    beanTitle: beanTitle,
+                    com: this.answers.com_name
+                }
+            );
+            this.fs.copyTpl(
+                this.templatePath('serviceImpl.java'),
+                this.destinationPath('public/service/impl/' + fileTitle + 'ServiceImpl.java'), {
+                    fileTitle: fileTitle,
+                    beanTitle: beanTitle,
+                    com: this.answers.com_name
+                }
+            );
 
+            /**
+             * 创建ws服务类
+             */
+            this.fs.copyTpl(
+                this.templatePath('queryWS.java'),
+                this.destinationPath('public/ws/' + fileTitle + 'QueryWebService.java'), {
+                    fileTitle: fileTitle,
+                    beanTitle: beanTitle,
+                    com: this.answers.com_name
+                }
+            );
+        }
     }
 });

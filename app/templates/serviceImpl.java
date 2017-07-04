@@ -22,6 +22,12 @@ import com.wisedu.emap.<%=com%>.po.<%=fileTitle%>;
 import com.wisedu.emap.<%=com%>.po.<%=fileTitle%>Result;
 import com.wisedu.emap.<%=com%>.service.<%=fileTitle%>Service;
 
+/**
+ * <%=beanTitle%>服务实现类
+ * 
+ * @author 
+ * 
+ */
 @Service("<%=beanTitle%>Service")
 public class <%=fileTitle%>ServiceImpl implements <%=fileTitle%>Service {
 
