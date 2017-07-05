@@ -36,6 +36,7 @@ module.exports = yeoman.extend({
     },
 
     selfFunction: function() {
+        
     },
 
     writing: function() {
