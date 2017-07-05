@@ -36,7 +36,6 @@ module.exports = yeoman.extend({
     },
 
     selfFunction: function() {
-        //this.log("执行了自定义方法");
     },
 
     writing: function() {
