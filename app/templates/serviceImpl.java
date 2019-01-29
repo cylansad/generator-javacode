@@ -1,4 +1,4 @@
-package com.wisedu.emap.<%=com%>.service.<%=beanTitle%>.impl;
+package com.wisedu.emap.<%=com%>.service.impl;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -24,11 +24,8 @@ import com.wisedu.emap.<%=com%>.service.<%=fileTitle%>Service;
 
 /**
  * <%=beanTitle%>服务实现类
- * 
- * @author 
- * 
  */
-@Service("<%=beanTitle%>Service")
+@Service("<%=com%>.<%=beanTitle%>Service")
 public class <%=fileTitle%>ServiceImpl implements <%=fileTitle%>Service {
 
 	@Autowired

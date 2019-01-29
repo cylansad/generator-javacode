@@ -1,32 +1,32 @@
 {
-    "name": "generator-javacode",
-    "version": "0.0.2",
-    "description": "My generator",
-    "files": [
-        "app",
-        "router"
-    ],
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/cylansad/generator-javacode.git"
-    },
-    "keywords": [
-        "yeoman-generator"
-    ],
-    "author": "cylansad",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/cylansad/generator-javacode/issues"
-    },
-    "homepage": "https://github.com/cylansad/generator-javacode",
-    "dependencies": {
-        "yeoman-generator": "^1.1.1"
-    },
-    "devDependencies": {
-        "yosay": "^2.0.0"
-    }
+  "name": "generator-javacode",
+  "version": "0.0.3",
+  "description": "My generator",
+  "files": [
+    "app",
+    "router"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cylansad/generator-javacode.git"
+  },
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "author": "cylansad",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cylansad/generator-javacode/issues"
+  },
+  "homepage": "https://github.com/cylansad/generator-javacode",
+  "dependencies": {
+    "yeoman-generator": "^1.1.1"
+  },
+  "devDependencies": {
+    "yosay": "^2.0.0"
+  }
 }
