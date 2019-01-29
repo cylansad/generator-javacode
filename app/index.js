@@ -36,7 +36,7 @@ module.exports = yeoman.extend({
     },
 
     selfFunction: function() {
-        
+
     },
 
     writing: function() {
@@ -114,6 +114,14 @@ module.exports = yeoman.extend({
             this.fs.copyTpl(
                 this.templatePath('queryWS.java'),
                 this.destinationPath('public/ws/' + fileTitle + 'QueryWebService.java'), {
+                    fileTitle: fileTitle,
+                    beanTitle: beanTitle,
+                    com: this.answers.com_name
+                }
+            );
+            this.fs.copyTpl(
+                this.templatePath('writeWS.java'),
+                this.destinationPath('public/ws/' + fileTitle + 'WriteWebService.java'), {
                     fileTitle: fileTitle,
                     beanTitle: beanTitle,
                     com: this.answers.com_name

@@ -13,7 +13,6 @@ import com.wisedu.business.exception.BusinessException;
 import com.wisedu.business.ws.OperateResult;
 import com.wisedu.business.ws.QueryConfig;
 import com.wisedu.business.ws.UserInfo;
-import com.wisedu.emap.dao.DaoService;
 import com.wisedu.emap.gglgl.constants.GglglConstants;
 import com.wisedu.emap.gglgl.service.CommonService;
 import com.wisedu.emap.gglgl.service.DataPermissionService;
@@ -34,8 +33,6 @@ public class <%=fileTitle%>ServiceImpl implements <%=fileTitle%>Service {
 	private CommonService commonService;
 	@Autowired
 	private <%=fileTitle%>Dao <%=beanTitle%>Dao;
-	@Autowired
-	private DaoService daoService;
 
 	/**
 	 * <%=beanTitle%>查询
